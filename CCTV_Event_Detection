@@ -1,0 +1,22 @@
+CCTV_Event_Detection/
+│
+├── app.py
+├── camera.py
+├── detection.py
+├── event_detection.py
+├── database.py
+├── alerts.py
+│
+├── templates/
+│   ├── index.html
+│   ├── login.html
+│   └── events.html
+│
+├── static/
+│   ├── style.css
+│   └── screenshots/
+│
+├── recordings/
+├── models/
+├── requirements.txt
+└── README.md
