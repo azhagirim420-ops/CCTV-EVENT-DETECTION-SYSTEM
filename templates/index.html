@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI CCTV Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <h1>AI CCTV EVENT DETECTION</h1>
+    <p>Intelligent Security Monitoring System</p>
+</header>
+
+<main>
+
+    <section class="status">
+        <h2>System Status</h2>
+        <p id="systemStatus">Checking...</p>
+    </section>
+
+    <section class="cards">
+
+        <div class="card">
+            <h3>Detected People</h3>
+            <p id="people">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Detected Vehicles</h3>
+            <p id="vehicles">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Events</h3>
+            <p id="totalEvents">0</p>
+        </div>
+
+    </section>
+
+    <section class="panel">
+
+        <h2>Camera Monitoring</h2>
+
+        <video id="camera" autoplay playsinline muted></video>
+
+        <canvas id="canvas" hidden></canvas>
+
+        <div class="buttons">
+            <button id="startBtn">
+                Start Camera
+            </button>
+
+            <button id="stopBtn">
+                Stop Camera
+            </button>
+        </div>
+
+        <h3>AI Detection Output</h3>
+
+        <img id="output"
+             src="/video_feed"
+             alt="AI detection output">
+
+    </section>
+
+    <section class="panel">
+
+        <h2>Detected Events</h2>
+
+        <div id="eventList">
+            Waiting for events...
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    CCTV Event Detection System
+    | Final Year Project
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}">
+</script>
+
+</body>
+</html>
